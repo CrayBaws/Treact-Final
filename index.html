@@ -224,6 +224,11 @@
   <div class="container">
     <div class="row steps__row">
 
+      <!-- IMAGE MOVED TO THE LEFT -->
+      <div class="steps__img">
+        <img src="assets/hero-screenshot-2.241aac1fbc66db29d873.png" alt="Steps Illustration">
+      </div>
+
       <div class="steps__text">
         <p class="section__label">STEPS</p>
 
@@ -265,13 +270,10 @@
         </div>
       </div>
 
-      <div class="steps__img">
-        <img src="assets/hero-screenshot-2.241aac1fbc66db29d873.png" alt="Steps Illustration">
-      </div>
-
     </div>
   </div>
 </section>
+
 
 <!-- VALUES -->
 <section id="values">
@@ -292,10 +294,17 @@
 
         <div class="values__list">
 
+          <!-- AFFORDABLE -->
           <div class="value">
             <div class="value__icon">
-              <img src="./assets/shield-icon.svg" alt="Shield Icon">
+              <!-- Shield Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                   viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
             </div>
+
             <div class="value__content">
               <h4>Affordable</h4>
               <p>
@@ -304,10 +313,18 @@
             </div>
           </div>
 
+          <!-- PROFESSIONAL -->
           <div class="value">
             <div class="value__icon">
-              <img src="./assets/briefcase-icon.svg" alt="Briefcase Icon">
+              <!-- Briefcase Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                   viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                <path d="M16 3H8v4h8V3z"/>
+              </svg>
             </div>
+
             <div class="value__content">
               <h4>Professional</h4>
               <p>
@@ -327,4 +344,87 @@
   </div>
 </section>
 
+<!-- PRICING -->
+<section id="pricing">
+  <div class="container">
+    <div class="pricing__header">
+      <p class="section__label">PRICING</p>
 
+      <h2>
+        Reasonable & Flexible <span class="highlight">Plans.</span>
+      </h2>
+
+      <p class="pricing__description">
+        Choose a plan that fits your needs. Whether you're an individual, a small business,
+        or a large company, we offer options that scale with you.
+      </p>
+    </div>
+
+    <div class="pricing__cards">
+
+      <!-- PERSONAL -->
+      <div class="pricing__card">
+        <div class="pricing__top">
+          <span class="pricing__name">PERSONAL</span>
+          <span class="pricing__price">$17.99</span>
+          <span class="pricing__duration">MONTHLY</span>
+          <span class="pricing__subtitle">For Individuals</span>
+        </div>
+
+        <div class="pricing__features">
+          <span>30 Templates</span>
+          <span>7 Landing Pages</span>
+          <span>12 Internal Pages</span>
+          <span>Basic Assistance</span>
+        </div>
+
+        <div class="pricing__action">
+          <button class="btn btn--primary pricing__btn">BUY NOW</button>
+        </div>
+      </div>
+
+      <!-- BUSINESS (FEATURED) -->
+      <div class="pricing__card pricing__card--featured">
+        <div class="pricing__top">
+          <span class="pricing__name">BUSINESS</span>
+          <span class="pricing__price">$37.99</span>
+          <span class="pricing__duration">MONTHLY</span>
+          <span class="pricing__subtitle">For Small Businesses</span>
+        </div>
+
+        <div class="pricing__features">
+          <span>60 Templates</span>
+          <span>15 Landing Pages</span>
+          <span>22 Internal Pages</span>
+          <span>Priority Assistance</span>
+        </div>
+
+        <div class="pricing__action">
+          <button class="btn btn--primary pricing__btn">BUY NOW</button>
+        </div>
+      </div>
+
+      <!-- ENTERPRISE -->
+      <div class="pricing__card">
+        <div class="pricing__top">
+          <span class="pricing__name">ENTERPRISE</span>
+          <span class="pricing__price">$57.99</span>
+          <span class="pricing__duration">MONTHLY</span>
+          <span class="pricing__subtitle">For Large Companies</span>
+        </div>
+
+        <div class="pricing__features">
+          <span>90 Templates</span>
+          <span>27 Landing Pages</span>
+          <span>37 Internal Pages</span>
+          <span>Personal Assistance</span>
+        </div>
+
+        <div class="pricing__action">
+          <button class="btn btn--primary pricing__btn">BUY NOW</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
