@@ -29,6 +29,10 @@ body {
     padding: 96px 0;
 }
 
+.highlight {
+  color: #6415ff;
+}
+
 .purple {
     color: #6415ff;
 }
@@ -48,22 +52,76 @@ NAVBAR ↓
 
 */
 
+/* NAV LINKS */
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav__link {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #243e63;
+  transition: color 200ms ease;
+}
+
+.nav__link:hover {
+  color: #6415ff;
+}
+
+/* SIGN UP BUTTON */
+.nav__link--primary {
+  padding: 12px 32px;
+  background-color: #6415ff;
+  color: white !important;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: background-color 200ms ease;
+}
+
+.nav__link--primary:hover {
+  background-color: #4b11cc;
+}
+
+
 
 nav {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding-top: 32px;
 }
 
 .nav__row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
 
-.nav__logo {
+.logo {
+    height: 40px;
+    width: auto;
     display: flex;
     align-items: center;
     margin: 8px 0;
     padding-bottom: 4px;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo__text {
+  font-size: 24px;
+  font-weight: 700;
+  color: #6415ff;
 }
 
 
@@ -147,6 +205,87 @@ header .row {
     align-items: center;
     justify-content: space-between;
 }
+
+/* HERO SECTION */
+
+header .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__text {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.header__text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #243e63;
+}
+
+.header__subtext {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #4a5568;
+}
+
+.header__email {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header__email input {
+  padding: 14px 20px;
+  border: 2px solid #e2e8f0;
+  border-radius: 9999px;
+  width: 60%;
+  font-size: 16px;
+}
+
+.header__email button {
+  padding: 14px 32px;
+  background-color: #6415ff;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.header__email button:hover {
+  background-color: #4b11cc;
+}
+
+.trusted {
+  font-size: 14px;
+  font-weight: 600;
+  color: #a0aec0;
+  margin-top: 16px;
+}
+
+.trusted__logos img {
+  width: 70%;
+  max-width: 400px;
+  opacity: 0,7;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  opacity: 0.7;
+}
+
+.header__img {
+  width: 60%;
+}
+
+.header__img img {
+  width: 100%;
+}
+
 
 
 /* 

@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <script src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treact Landing Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
 </head>
 
 <body>
-    <section id="landing">
-        <nav>
+  <section id="landing">
+
+    <!-- NAVBAR -->
+    <nav>
   <div class="row nav__row">
+
+    <!-- LOGO -->
     <div class="nav__logo">
-      <img src="./assets/logo.svg" alt="Logo" class="logo">
+      <img src="assets/logo.2c489fc453a1783cbadacf914efa3df6.svg" alt="Treact Logo" class="logo">
+      <span class="logo__text">Treact</span>
     </div>
 
+
+    <!-- NAV LINKS -->
     <ul class="nav__links">
       <li><a href="#features" class="nav__link">About</a></li>
       <li><a href="#blog" class="nav__link">Blog</a></li>
@@ -29,8 +33,9 @@
       <li><a href="#signup" class="nav__link nav__link--primary">Sign Up</a></li>
     </ul>
 
+    <!-- MOBILE MENU BUTTON -->
     <button class="btn__menu" onclick="openMenu()">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
         class="btn__menu--svg">
         <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -38,89 +43,196 @@
         <line x1="3" y1="18" x2="21" y2="18"></line>
       </svg>
     </button>
+
   </div>
 </nav>
-        <div class="modal">
-            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="light___StyledCloseIcon-lj69nl-14 fASujC">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-            <div class="modal__links">
-                <a class="modal__link">About</a>
-                <a class="modal__link">Blog</a>
-                <a class="modal__link">Pricing</a>
-                <a class="modal__link">Contact Us</a>
-                <a class="modal__link">Login</a>
-                <a class="modal__link modal__link--primary">Sign Up</a>
-            </div>
+<header>
+  <div class="container">
+    <div class="row">
+
+      <!-- LEFT SIDE: TEXT -->
+      <div class="header__text">
+        <h1>
+  Beautiful React Templates <span class="highlight">for you.</span>
+</h1>
+
+        <p class="header__subtext">
+          Our templates are easy to setup, understand and customize.
+          Fully modular components with a variety of pages and components.
+        </p>
+
+        <div class="header__email">
+          <input type="email" placeholder="Your E-mail Address">
+          <button class="btn btn--primary">Get Started</button>
         </div>
-        <header>
-            <div class="container">
-                <div class="row">
-                    <!--  -->Enter Header / About Us Section<!--  -->
-            </div>
-        </header>
-    </section>
-    <main>
-        <section id="features">
-            <div class="container">
-                <div class="row__narrow">
-                    <!--  -->Enter Features Section<!--  -->
-                </div>
-            </div>
-        </section>
-        <section id="quality">
-            <div class="container">
-                <div class="row">
-                    <!--  -->Enter Quality Work Section<!--  -->
-                </div>
-            </div>
-        </section>
-        <section id="steps">
-            <div class="container">
-                <div class="row">
-                    <!--  -->Enter Steps Section<!--  -->
-                </div>
-            </div>
-        </section>
-        <section id="values">
-            <div class="container">
-                <div class="row">
-                    <!--  -->Enter Values Section<!--  -->
-                </div>
-            </div>
-        </section>
-        <section id="pricing">
-            <div class="container">
-                <div class="row">
-                    <!--  -->Enter Pricing Section<!--  -->
-                </div>
-            </div>
-        </section>
-        <section id="testimonials">
-            <div class="container">
-                <div class="row">
-                    <!--  -->Enter Testimonials Section<!--  -->
-                </div>
-            </div>
-        </section>
-        <section id="start">
-            <div class="container">
-                <div class="row">
-                    <!--  -->Enter "Start"/Call to action section<!--  -->
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="row footer__row">
-            <!--  -->Enter Footer<!--  -->
+
+        <p class="trusted">OUR TRUSTED CUSTOMERS</p>
+
+        <div class="trusted__logos">
+          <!-- Replace these with your own asset files -->
+          <img src="assets/customers-logo-strip.680ac7c2e8ae28161d2c.png" alt="Fortune">
+          
         </div>
-    </footer>
+      </div>
+
+      <!-- RIGHT SIDE: IMAGE -->
+      <div class="header__img">
+        <!-- Replace this with your own hero image -->
+        <img src="assets/design-illustration-2.6da6a00b20c07c4a9b65d1870679e1b8.svg" alt="Hero Illustration">
+      </div>
+
+    </div>
+  </div>
+</header>
+
+
+<!-- MOBILE MENU MODAL -->
+<div class="modal">
+  <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="18" y1="6" x2="6" y2="18"></line>
+      <line x1="6" y1="6" x2="18" y2="18"></line>
+    </svg>
+  </button>
+
+  <div class="modal__links">
+    <a class="modal__link">About</a>
+    <a class="modal__link">Blog</a>
+    <a class="modal__link">Pricing</a>
+    <a class="modal__link">Contact Us</a>
+    <a class="modal__link">Login</a>
+    <a class="modal__link modal__link--primary">Sign Up</a>
+  </div>
+</div>
+
 </body>
 
-</html>
+
+
+    <div class="modal">
+      <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="modal__links">
+        <a class="modal__link">About</a>
+        <a class="modal__link">Blog</a>
+        <a class="modal__link">Pricing</a>
+        <a class="modal__link">Contact Us</a>
+        <a class="modal__link">Login</a>
+        <a class="modal__link modal__link--primary">Sign Up</a>
+      </div>
+    </div>
+
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="header__text">
+            <h1>Beautiful React Templates for you.</h1>
+            <p>Our templates are easy to setup, understand and customize. Fully modular components with a variety of pages and components.</p>
+
+            <div class="header__email">
+              <input type="email" placeholder="Your E-mail Address">
+              <button class="btn btn--primary">Get Started</button>
+            </div>
+
+            <p class="trusted">OUR TRUSTED CUSTOMERS</p>
+            <div class="trusted__logos">
+              <img src="./assets/fortune.svg" alt="Fortune">
+              <img src="./assets/fastcompany.svg" alt="Fast Company">
+              <img src="./assets/natgeo.svg" alt="National Geographic">
+            </div>
+          </div>
+
+          <div class="header__img">
+            <img src="./assets/hero-image.svg" alt="Hero Illustration">
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <main>
+
+    <!-- FEATURES -->
+    <section id="features">
+      <div class="container">
+        <div class="row__narrow">
+          <h2 class="purple">FEATURES</h2>
+          <h3>We have Amazing Service.</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+          <div class="services">
+            <div class="service">
+              <h4>Secure</h4>
+              <p>We strictly only deal with vendors that provide top notch security.</p>
+            </div>
+
+            <div class="service">
+              <h4>24/7 Support</h4>
+              <p>Lorem ipsum donor amet siti ceali ut enim ad minim veniam.</p>
+            </div>
+
+            <div class="service">
+              <h4>Customizable</h4>
+              <p>Lorem ipsum donor amet siti ceali ut enim ad minim veniam.</p>
+            </div>
+
+            <div class="service">
+              <h4>Reliable</h4>
+              <p>Lorem ipsum donor amet siti ceali ut enim ad minim veniam.</p>
+            </div>
+
+            <div class="service">
+              <h4>Fast</h4>
+              <p>Lorem ipsum donor amet siti ceali ut enim ad minim veniam.</p>
+            </div>
+
+            <div class="service">
+              <h4>Easy</h4>
+              <p>Lorem ipsum donor amet siti ceali ut enim ad minim veniam.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUALITY -->
+    <section id="quality">
+      <div class="container">
+        <div class="row">
+          <div class="quality__text">
+            <h2>Designed & Developed by Professionals.</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button class="btn btn--primary">Learn More</button>
+          </div>
+
+          <div class="quality__img">
+            <img src="./assets/quality.svg" alt="Quality Illustration">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEPS -->
+    <section id="steps">
+      <div class="container">
+        <div class="row">
+          <div class="steps__text">
+            <h2>Easy to Get Started.</h2>
+
+            <div class="step">
+              <h3>01</h3>
+              <h4>Register</h4>
+              <p>Create an account with us using Google or Facebook.</p>
+            </div>
+
+            <div class="step">
+              <h3>02</h3>
+              <h4>Download</h4>
+              <p>Browse and download the template that
