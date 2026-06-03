@@ -90,10 +90,13 @@ button, .btn {
 /* NAVBAR */
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 0;
+  margin-bottom: 40px;
 }
+
+
 
 .nav__row {
   width: 100%;
@@ -101,7 +104,13 @@ nav {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  
 }
+
+#landing {
+  padding-top: 0;
+}
+
 
 .nav__logo {
   display: flex;
