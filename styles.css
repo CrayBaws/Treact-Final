@@ -766,6 +766,7 @@ footer {
 }
 
 /* RESPONSIVE */
+
 @media (max-width: 768px) {
   .footer__row {
     flex-direction: column;
