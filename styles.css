@@ -2,6 +2,12 @@
 
 /* ========== RESET & GLOBAL ========== */
 
+.header__email {
+  max-width: 480px;
+  width: 100%;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -275,12 +281,13 @@ header .row {
 }
 
 .header__email input {
+  width: 65%;
   padding: 14px 20px;
   border: 2px solid #e2e8f0;
   border-radius: 9999px;
-  width: 60%;
   font-size: 16px;
 }
+
 
 .header__email button {
   padding: 14px 32px;
@@ -692,12 +699,10 @@ footer {
 }
 
 .footer__row {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   gap: 48px;
   margin-bottom: 48px;
-  padding: 0 24px;
 }
 
 .footer__col {
@@ -710,7 +715,7 @@ footer {
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.1em;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .footer__col a {
@@ -731,6 +736,22 @@ footer {
   font-size: 14px;
   color: #e9d8fd;
 }
+
+/* MOBILE */
+@media (max-width: 1024px) {
+  .footer__row {
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__row {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
 
 /* ========== RESPONSIVE ========== */
 
@@ -790,8 +811,30 @@ footer {
   .steps__row,
   .values__row,
   .testimonials__row {
+    flex-direction: column;
+    text-align: center;
     gap: 40px;
   }
+  /* STEPS — center items on tablet + mobile */
+.step {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.step__number {
+  font-size: 32px;
+  font-weight: 700;
+  color: #cbd5e0;
+}
+
+.step__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
   .header__text,
   .header__img {
@@ -807,6 +850,27 @@ footer {
   .nav__links {
     display: none;
   }
+
+  /* STEPS — center items on tablet + mobile */
+.step {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.step__number {
+  font-size: 32px;
+  font-weight: 700;
+  color: #cbd5e0;
+}
+
+.step__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
   .btn__menu {
     display: block;
@@ -857,6 +921,26 @@ footer {
   gap: 24px;                 /* spacing between buttons */
   width: 100%;               /* ensures they don't hug the left */
 }
+
+  /* STEPS — center items on mobile */
+  .step {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .step__number {
+    font-size: 32px;
+    font-weight: 700;
+    color: #cbd5e0;
+  }
+
+  .step__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
 
   .footer__row {
@@ -1027,3 +1111,64 @@ footer {
     padding: 32px 24px;
   }
 }
+
+/* ============================================
+   FINAL FIX — HERO EMAIL FORM (TABLET + MOBILE)
+   ============================================ */
+
+/* Tablet and below — center hero text */
+@media (max-width: 1024px) {
+  .header__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header__email {
+    max-width: 420px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .header__email input {
+    width: 65%;
+  }
+
+  .header__email button {
+    white-space: nowrap;
+  }
+}
+
+/* Mobile — stack input + button, keep centered */
+@media (max-width: 768px) {
+  .header__email {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .header__email input,
+  .header__email button {
+    width: 100%;
+  }
+}
+
+/* FINAL FIX — Center trusted logos on tablet + mobile */
+@media (max-width: 1024px) {
+  .header__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .trusted__logos {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
