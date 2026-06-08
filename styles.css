@@ -1172,3 +1172,147 @@ footer {
   }
 }
 
+/* Combined pill-style email bar */
+.email-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  margin: 0;
+}
+
+.email-wrapper input {
+  width: 100%;
+  padding: 16px 140px 16px 20px; /* space on right for button */
+  border: 2px solid #e2e8f0;
+  border-radius: 9999px;
+  font-size: 16px;
+}
+
+.email-wrapper button {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 40px;
+  padding: 0 24px;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+
+/* Increase spacing between email pill and trusted companies */
+.header__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 32px;   /* increase this number to open the space */
+}
+
+.trusted {
+  margin-top: 24px;   /* adjust to taste */
+}
+
+/* Make the trusted companies logo strip larger */
+.trusted__logos img {
+  width: 100%;
+  max-width: 450px;   /* increase this number to make it bigger */
+  opacity: 0.7;
+}
+
+/* Desktop: keep hero text left-aligned */
+@media (min-width: 1024px) {
+  .header__text {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+/* Tablet + Mobile: center hero text again */
+@media (max-width: 1023px) {
+  .header__text {
+    align-items: center;
+    text-align: center;
+  }
+
+  .email-wrapper {
+    margin: 0 auto; /* recenter the pill */
+  }
+
+  .trusted,
+  .trusted__logos {
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* FEATURES SECTION SPACING FIXES */
+#features {
+  padding-top: 80px;      /* more space above the section */
+  padding-bottom: 80px;   /* more space below the section */
+}
+
+.features__header {
+  margin-bottom: 48px;    /* space between heading block and grid */
+}
+
+.features__grid {
+  row-gap: 40px;          /* vertical spacing between feature items */
+  column-gap: 32px;       /* horizontal spacing */
+}
+
+/* Desktop-wide horizontal padding like the example site */
+@media (min-width: 1024px) {
+  #features {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+
+/* Global container spacing to match the example site */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .container {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 128px;
+    padding-right: 128px;
+  }
+}
+
+/* GLOBAL CONTAINER FIX — matches the example site's breathing room */
+.container {
+  max-width: 1280px !important;
+  margin: 0 auto !important;
+  padding-left: 32px !important;
+  padding-right: 32px !important;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .container {
+    padding-left: 64px !important;
+    padding-right: 64px !important;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 128px !important;
+    padding-right: 128px !important;
+  }
+}
+
