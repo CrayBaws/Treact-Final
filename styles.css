@@ -632,6 +632,7 @@ header .row {
   flex-wrap: wrap;
 }
 
+/* Base card */
 .pricing__card {
   border: 1px solid #e2e8f0;
   border-radius: 8px;
@@ -649,11 +650,13 @@ header .row {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
 }
 
+/* Featured card (center) — blue border + shadow */
 .pricing__card--featured {
-  border-color: #6415ff;
-  box-shadow: 0 12px 24px rgba(100, 21, 255, 0.15);
+  border-color: #3b82f6;
+  box-shadow: 0 12px 24px rgba(59, 130, 246, 0.15);
 }
 
+/* Card content */
 .pricing__top {
   text-align: center;
 }
@@ -661,7 +664,6 @@ header .row {
 .pricing__name {
   font-size: 20px;
   font-weight: 700;
-  display: block;
   margin-bottom: 8px;
 }
 
@@ -669,7 +671,6 @@ header .row {
   font-size: 48px;
   font-weight: 800;
   color: #1a202c;
-  display: block;
 }
 
 .pricing__duration {
@@ -694,6 +695,169 @@ header .row {
 .pricing__action {
   text-align: center;
 }
+
+/* Base button shape */
+.pricing__btn {
+  width: 100%;
+  padding: 12px 0;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  transition: background 200ms ease, box-shadow 200ms ease, color 200ms ease;
+  color: #fff;
+}
+
+/* Improve vertical spacing inside pricing cards */
+.pricing__top {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* controls spacing between name, price, monthly, subtitle */
+}
+
+/* Make MONTHLY sit directly under the price */
+.pricing__duration {
+  margin-top: -4px; /* pulls MONTHLY closer to the price */
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+
+/* Add consistent spacing below subtitle */
+.pricing__subtitle {
+  margin-top: 4px;
+}
+
+/* Improve vertical spacing inside pricing cards */
+.pricing__top {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* increased spacing between rows */
+}
+
+/* Price spacing */
+.pricing__price {
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+/* MONTHLY spacing */
+.pricing__duration {
+  margin-top: -2px; /* keeps it close to price */
+  line-height: 1.4;
+}
+
+/* Subtitle spacing */
+.pricing__subtitle {
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* Feature list spacing */
+.pricing__features span {
+  line-height: 1.6;
+}
+
+/* Make MONTHLY bold + larger + better spaced */
+.pricing__duration {
+  font-size: 22px;     /* slightly larger */
+  font-weight: 700;    /* bold */
+  letter-spacing: 0.12em;
+  margin-top: -2px;    /* keeps it close to the price */
+  line-height: 1.4;
+}
+
+/* Improve subtitle styling inside pricing cards */
+.pricing__subtitle {
+  font-size: 16px;      /* slightly larger */
+  font-weight: 600;     /* semi-bold */
+  color: #4a5568;       /* keep your existing gray */
+  margin-top: 10px;     /* spacing above */
+  margin-bottom: 10px;  /* spacing below */
+  line-height: 1.5;
+}
+
+
+/* Divider line under MONTHLY */
+.pricing__duration {
+  position: relative;
+  padding-bottom: 16px; /* space above the line */
+}
+
+.pricing__duration::after {
+  content: "";
+  display: block;
+  width: 40%;              /* adjust width to taste */
+  height: 1px;
+  background-color: #e2e8f0; /* soft gray line */
+  margin: 12px auto 0;     /* centers the line */
+  border-radius: 2px;
+}
+
+
+
+
+/* ========== COLOR VARIANTS ========== */
+
+/* GREEN CARD */
+.pricing__card--green {
+  border-top: 6px solid #10b981;
+}
+
+.pricing__card--green .pricing__btn {
+  background-color: #10b981;
+}
+
+.pricing__card--green .pricing__btn:hover {
+  background-color: #0e9f6e;
+  box-shadow: 0 10px 20px rgba(16, 185, 129, 0.25);
+}
+
+/* RED CARD */
+.pricing__card--red {
+  border-top: 6px solid #ef4444;
+}
+
+.pricing__card--red .pricing__btn {
+  background-color: #ef4444;
+}
+
+.pricing__card--red .pricing__btn:hover {
+  background-color: #dc2626;
+  box-shadow: 0 10px 20px rgba(239, 68, 68, 0.25);
+}
+
+/* BLUE FEATURED CARD — FULL BLUE BACKGROUND */
+.pricing__card--blue {
+  background-color: #3b82f6;          /* solid blue */
+  border: 1px solid #3b82f6;
+  border-top: 6px solid #1e40af;      /* darker trim */
+  box-shadow: 0 16px 32px rgba(59, 130, 246, 0.35);
+}
+
+/* White text inside blue card */
+.pricing__card--blue .pricing__name,
+.pricing__card--blue .pricing__price,
+.pricing__card--blue .pricing__duration,
+.pricing__card--blue .pricing__subtitle,
+.pricing__card--blue .pricing__features span {
+  color: #ffffff;
+}
+
+/* BLUE CARD BUTTON — white with blue text */
+.pricing__card--blue .pricing__btn {
+  background-color: #ffffff;
+  color: #1e40af;
+  border: 2px solid #1e40af;
+}
+
+.pricing__card--blue .pricing__btn:hover {
+  background-color: #e0eaff;
+  color: #1e3a8a;
+  box-shadow: 0 10px 20px rgba(30, 58, 138, 0.25);
+}
+
 
 /* ========== TESTIMONIALS ========== */
 
@@ -1392,3 +1556,4 @@ footer {
     padding-right: 40px;
   }
 }
+
