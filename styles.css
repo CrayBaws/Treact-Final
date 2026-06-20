@@ -1812,3 +1812,15 @@ section {
   align-items: center;
 }
 
+/* === KEEP QUALITY, STEPS, VALUES SIDE-BY-SIDE ON SMALLER WINDOWS === */
+@media (max-width: 1024px) {
+  .quality__row,
+  .steps__row,
+  .values__row {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    text-align: left !important;
+    gap: 48px !important;
+  }
+}
