@@ -1623,7 +1623,7 @@ body {
     text-align: left;
     align-items: flex-start;
   }
-}
+
 
 @media (max-width: 1024px) {
   .features__grid {
@@ -1852,3 +1852,37 @@ html {
     height: auto !important;
   }
 }
+
+/* === FIX IMAGE STACKING ON SMALL SCREENS === */
+@media (max-width: 768px) {
+  .quality__img img,
+  .steps__img img,
+  .values__img img,
+  .testimonials__img img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  .quality__row,
+  .steps__row,
+  .values__row,
+  .testimonials__row {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 32px !important;
+  }
+}
+
+/* === FINAL FIX: CENTER FEATURES GRID ON PHONES === */
+@media (max-width: 768px) {
+  .features__grid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    justify-items: center !important;
+  }
+}
+
