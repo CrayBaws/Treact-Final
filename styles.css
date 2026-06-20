@@ -1840,3 +1840,7 @@ section {
   align-items: center;
   margin: 0 auto 24px;   /* centers it above the links */
 }
+
+html {
+  scroll-behavior: smooth;
+}
