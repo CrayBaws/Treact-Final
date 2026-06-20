@@ -802,11 +802,11 @@ header .row {
 
 /* GREEN CARD */
 .pricing__card--green {
-  border-top: 6px solid #10b981;
+  border-top: 6px solid #5acac1;
 }
 
 .pricing__card--green .pricing__btn {
-  background-color: #10b981;
+  background-color: #5acac1;
 }
 
 .pricing__card--green .pricing__btn:hover {
@@ -816,11 +816,11 @@ header .row {
 
 /* RED CARD */
 .pricing__card--red {
-  border-top: 6px solid #ef4444;
+  border-top: 6px solid #f88383;
 }
 
 .pricing__card--red .pricing__btn {
-  background-color: #ef4444;
+  background-color: #f88383;
 }
 
 .pricing__card--red .pricing__btn:hover {
@@ -830,8 +830,8 @@ header .row {
 
 /* BLUE FEATURED CARD — FULL BLUE BACKGROUND */
 .pricing__card--blue {
-  background-color: #3b82f6;          /* solid blue */
-  border: 1px solid #3b82f6;
+  background-color: #6074e1;          /* solid blue */
+  border: 1px solid #6074e1;
   border-top: 6px solid #1e40af;      /* darker trim */
   box-shadow: 0 16px 32px rgba(59, 130, 246, 0.35);
 }
@@ -845,18 +845,31 @@ header .row {
   color: #ffffff;
 }
 
-/* BLUE CARD BUTTON — white with blue text */
+/* BLUE FEATURED CARD — MATCH EXAMPLE */
+.pricing__card--blue {
+  background-color: #6074e1;
+  border: 1px solid #6074e1;
+  border-top: 6px solid #2563eb; /* correct trim */
+  box-shadow: 0 12px 24px rgba(59, 130, 246, 0.25);
+}
+
+/* White text */
+.pricing__card--blue * {
+  color: #ffffff !important;
+}
+
+/* Button */
 .pricing__card--blue .pricing__btn {
   background-color: #ffffff;
-  color: #1e40af;
-  border: 2px solid #1e40af;
+  color: #1e40af !important;
+  border: none;
 }
 
 .pricing__card--blue .pricing__btn:hover {
   background-color: #e0eaff;
-  color: #1e3a8a;
-  box-shadow: 0 10px 20px rgba(30, 58, 138, 0.25);
+  color: #1e3a8a !important;
 }
+
 
 /* ========== TESTIMONIALS ========== */
 
@@ -894,6 +907,8 @@ header .row {
 
 /* ARROWS — always below stars, aligned right */
 .testimonials__arrows {
+  align-self: flex-end;
+  margin-top: -24px;
   display: flex;
   justify-content: flex-end;
   gap: 12px;
@@ -1426,6 +1441,12 @@ body {
     display: block;
   }
 
+  
+
+  
+
+
+
   /* FEATURES → 1 column */
   .features__grid {
     grid-template-columns: 1fr;
@@ -1659,4 +1680,111 @@ body {
 
 #footer {
   min-height: 200px; /* adjust to taste */
+}
+
+/* === MATCH EXAMPLE SITE SIDE PADDING === */
+
+section {
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  section {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  section {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/* === FIX SIDE PADDING TO MATCH EXAMPLE SITE === */
+
+/* Desktop */
+section {
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  section {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  section {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/* === FINAL NAVBAR FIX — OVERRIDES GLOBAL .row RULE === */
+@media (max-width: 1024px) {
+  .nav__row {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 0 !important;
+  }
+}
+
+/* === FIX FOOTER OVERLAP ON SMALL SCREENS === */
+@media (max-width: 768px) {
+  .footer__bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .footer__brand {
+    justify-content: center;
+  }
+
+  .footer__copy {
+    text-align: center;
+  }
+
+  .footer__socials {
+    justify-content: center;
+  }
+}
+
+/* === FIX FOOTER OVERLAP WITHOUT STACKING === */
+@media (max-width: 768px) {
+
+  .footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px; /* prevents collisions */
+    flex-wrap: nowrap; /* keep on one line */
+  }
+
+  /* Allow brand to shrink instead of pushing into copyright */
+  .footer__brand {
+    flex-shrink: 1;
+    min-width: 0;
+  }
+
+  /* Prevent text from wrapping awkwardly */
+  .footer__copy {
+    white-space: nowrap;
+    flex-shrink: 1;
+  }
+
+  /* Allow icons to shrink and stay aligned */
+  .footer__socials {
+    flex-shrink: 0;
+  }
 }
