@@ -1844,3 +1844,11 @@ section {
 html {
   scroll-behavior: smooth;
 }
+
+/* Fix Quality section image overflowing on mobile */
+@media (max-width: 768px) {
+  .quality__img img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
