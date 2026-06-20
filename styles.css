@@ -1619,13 +1619,7 @@ body {
   }
 }
 
-@media (max-width: 1024px) {
-  .feature {
-    flex-direction: row;
-    align-items: flex-start;
-    text-align: left;
-    gap: 16px;
-  }
+
 
   .feature__content {
     text-align: left;
@@ -1788,3 +1782,19 @@ section {
     flex-shrink: 0;
   }
 }
+
+/* === KEEP FEATURES IN GRID ON SMALLER WINDOWS === */
+@media (max-width: 768px) {
+  .features__grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* === FIX FEATURE TITLES ON SMALLER WINDOWS === */
+@media (max-width: 1024px) {
+  .feature__content {
+    text-align: center !important;
+    align-items: center !important;
+  }
+}
+
