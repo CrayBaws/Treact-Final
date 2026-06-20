@@ -907,8 +907,6 @@ header .row {
 
 /* ARROWS — always below stars, aligned right */
 .testimonials__arrows {
-  align-self: flex-end;
-  margin-top: -24px;
   display: flex;
   justify-content: flex-end;
   gap: 12px;
@@ -1796,5 +1794,21 @@ section {
     text-align: center !important;
     align-items: center !important;
   }
+}
+
+/* Align author + arrows on same row */
+.testimonials__bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+
+/* Clean arrow alignment */
+.testimonials__arrows {
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  align-items: center;
 }
 
